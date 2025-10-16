@@ -8,8 +8,8 @@ r = 10 # r < a / 2
 samples = 1_000_000
 grid_hits = 0
 for _ in range(samples):
-    x = random.randrange(int(a/2))
-    y = random.randrange(int(a/2))
+    x = random.random()*float(a/2)
+    y = random.random()*float(a/2)
     if x < r or y < r:
         grid_hits += 1
 
