@@ -43,16 +43,16 @@ def genPlot(samples: int, bins: int, ax):
     y = [density(x) for x in  x_range]
     pl = ax.plot(x_range, y, color='#f03b20')
 
-    ax.set_xlabel('X~FPG')
+    ax.set_xlabel('X')
     ax.set_ylabel('Probability')
-    ax.set_title('Samples='+str(samples)+'')
+    ax.set_title('FGP Samples='+str(samples)+'')
     ax.grid(True)
     return pl
 
 
 if __name__ == '__main__':
     fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
-    fig.suptitle('FGP Distribiution histograms', fontsize=20)
+    fig.suptitle('FGP Distribiution Histograms', fontsize=20)
     fig.set_figwidth(10)
     pl1 = genPlot(1000, 30, ax1)
     pl2 = genPlot(100000, 30, ax2)
